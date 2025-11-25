@@ -48,6 +48,5 @@ let Jones = sprites.create(img`
     `, SpriteKind.Player)
 controller.moveSprite(Jones)
 tiles.setTilemap(tilemap`level1`)
-tiles.placeOnRandomTile(Jones, assets.tile`transparency16`)
 scene.cameraFollowSprite(Jones)
 Level = 1
