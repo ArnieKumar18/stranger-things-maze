@@ -1,9 +1,21 @@
-scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.stairWest, function (sprite, location) {
-    tiles.setCurrentTilemap(tilemap`level2`)
-})
+function StartLevel () {
+    if (Level == 2) {
+        tiles.setCurrentTilemap(tilemap`level3`)
+    }
+    if (Level == 3) {
+        tiles.setCurrentTilemap(tilemap`level3`)
+    }
+    if (Level == 4) {
+        tiles.setCurrentTilemap(tilemap`level3`)
+    }
+    if (Level == 5) {
+        tiles.setCurrentTilemap(tilemap`level3`)
+    }
+}
+let Level = 0
 info.startCountdown(10)
 let mySprite2 = sprites.create(assets.image`demogorgon`, SpriteKind.Enemy)
-let mySprite = sprites.create(img`
+let Jones = sprites.create(img`
     ...............eeeeeee..................
     ..............eeeeeeee..................
     .............eeeeeeeeee.................
@@ -34,7 +46,8 @@ let mySprite = sprites.create(img`
     ...........feeeef..feeeef...............
     ...........ffffff..ffffff...............
     `, SpriteKind.Player)
-controller.moveSprite(mySprite)
+controller.moveSprite(Jones)
 tiles.setTilemap(tilemap`level1`)
-tiles.placeOnRandomTile(mySprite, assets.tile`transparency16`)
-scene.cameraFollowSprite(mySprite)
+tiles.placeOnRandomTile(Jones, assets.tile`transparency16`)
+scene.cameraFollowSprite(Jones)
+Level = 1
