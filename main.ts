@@ -13,6 +13,7 @@ function StartLevel () {
     }
 }
 let Level = 0
+Level = 1
 info.startCountdown(10)
 let mySprite2 = sprites.create(assets.image`demogorgon`, SpriteKind.Enemy)
 let Jones = sprites.create(img`
@@ -49,4 +50,4 @@ let Jones = sprites.create(img`
 controller.moveSprite(Jones)
 tiles.setTilemap(tilemap`level1`)
 scene.cameraFollowSprite(Jones)
-Level = 1
+StartLevel()
